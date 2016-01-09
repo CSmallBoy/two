@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import <MediaPlayer/MediaPlayer.h>
 @interface ViewController ()
 
 @end
@@ -17,6 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+}
+- (IBAction)buttonClick:(UIButton *)sender {
+    MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc]initWithContentURL:[NSURL URLWithString:@"http://video.szzhangchu.com/1450688015340_4769642689.mp4"]];
+   
+    player.view.frame = CGRectMake(0, 0, 375, 200);
+    [self.view addSubview:player.view];
+    [self presentViewController:player animated:YES completion:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
