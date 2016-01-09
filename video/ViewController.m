@@ -21,6 +21,7 @@
 }
 - (IBAction)buttonClick:(UIButton *)sender {
     MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc]initWithContentURL:[NSURL URLWithString:@"http://video.szzhangchu.com/1450688015340_4769642689.mp4"]];
+    
    
     player.view.frame = CGRectMake(0, 0, 375, 200);
     [self.view addSubview:player.view];
